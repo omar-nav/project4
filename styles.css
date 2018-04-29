@@ -1,0 +1,182 @@
+#closeWindow{
+    font-size: small;
+    padding: 1rem;
+}
+
+fieldset.text label {
+    position: relative;
+    color: #5ac6a9;
+    font-size: 2rem;
+    text-shadow: 5px 5px 5px indianred;
+    width: 12em;
+    text-align: right;
+    float: left;
+    clear: left;
+    margin-right: 10px;
+    margin-top: 15px;
+    padding: 3px;
+}
+fieldset.text input {
+    width: 50px;
+    height: 30px;
+}
+/*position: absolute;
+font-size: 2rem;
+text-shadow: 5px 5px 5px indianred;
+color: #0a1411;
+margin: auto;
+width: 50%;*/
+table {
+    border: 4px solid darkslategray;
+    padding: .2rem;
+    width: 10px;
+}
+td {
+    padding: .2rem;
+    margin:.5rem;
+}
+.dish {
+    border: 4px solid darkslategray;
+    padding: .1rem;
+    width: 10px;
+}
+image {
+    width: 20px;
+    height: 20px;
+}
+html  {
+    font-family: Futura, sans-serif;
+    font-size: 18px;
+    background-color: indianred;
+}
+header, nav {
+    display: block;
+}
+body {
+    display: block;
+    line-height: .01rem;
+}
+.container {
+    margin: auto;
+}
+div {
+    display: block;
+}
+.flex {
+    display: flex;
+}
+.address {
+    margin: auto;
+    width: 50%;
+    align-self: center;
+    position: relative;
+    bottom: 1rem;
+    font-family: Futura, sans-serif;
+    font-size: 2rem;
+    color: #0a1411;
+    line-height: 1.3rem;
+    text-shadow: 7px 7px 7px indianred;
+    font-weight: bold;
+    padding: 2rem 6.5rem;
+}
+.history {
+    background-color: indianred;
+    width: 80%;
+    position: relative;
+    bottom: 2rem;
+    left: 5rem;
+    font-family: Futura, sans-serif;
+    font-size: 1.5rem;
+    text-shadow: -3px -3px indianred;
+    color: #0a1411;
+    line-height: 2rem;
+}
+header {
+    background: url("images/backgroundImage.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 1rem;
+    height: 30rem;
+    margin: auto;
+}
+h1 {
+    font-size: 1rem;
+}
+header .flex {
+    justify-content: flex-start;
+    padding-left: 3rem;
+    padding-top: 0.5rem;
+}
+img {
+    border-style: solid;
+    border-color: indianred;
+    border-width: .3rem;
+    align-items: left;
+}
+nav {
+    background-color: indianred;
+    color: #0a1411;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav div {
+    display: flex;
+    align-items: center;
+}
+ul {
+    margin-right: 1rem;
+}
+ul li {
+    display: inline;
+}
+li {
+    color: #0a1411;
+    display: list-item;
+    text-align: match-parent;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.main-banner {
+    font-weight: bold;
+    display: inline-block;
+    text-align: left;
+}
+.casaDe {
+    position: relative;
+    bottom: 10rem;
+    left: 1rem;
+    font-family: Futura, sans-serif;
+    font-size: 2rem;
+    color: red;
+    margin: 0.2em 0;
+    line-height: 1.2rem;
+}
+.Choche {
+    position: relative;
+    bottom: 11.5rem;
+    left: 11.5rem;
+    font-family: Futura, sans-serif;
+    font-size: 2rem;
+    color: navajowhite;
+    line-height: 1.2rem;
+}
+.laCarta, legend {
+/*styling for heading*/
+    font-size: 2rem;
+    text-shadow: 5px 5px 5px indianred;
+    color: #0a1411;
+    margin: auto;
+    width: 20%;
+    padding: 3%;
+}
+.platos {
+    position: absolute;
+    font-size: 2rem;
+    text-shadow: 5px 5px 5px indianred;
+    color: #0a1411;
+    margin: auto;
+    width: 50%;
+}
