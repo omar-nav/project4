@@ -1,9 +1,9 @@
 function calculate() {
+    error=false;
     if (isNaN(document.forms[0].menuItem1.value) || isNaN(document.forms[0].menuItem2.value) || isNaN(document.forms[0].menuItem3.value) || isNaN(document.forms[0].menuItem4.value) || isNaN(document.forms[0].menuItem5.value)) {
         alert("Numeric values are required when ordering from the menu");
         error = true;
     } else {
-            error=false;
             var menuItemOne = parseInt(document.forms[0].menuItem1.value);
             var menuItemTwo = parseInt(document.forms[0].menuItem2.value);
             var menuItemThree = parseInt(document.forms[0].menuItem3.value);
