@@ -1,7 +1,24 @@
 function calculate() {
-    error=false;
+    var error=false;
+    var locations="";
     if (isNaN(document.forms[0].menuItem1.value) || isNaN(document.forms[0].menuItem2.value) || isNaN(document.forms[0].menuItem3.value) || isNaN(document.forms[0].menuItem4.value) || isNaN(document.forms[0].menuItem5.value)) {
-        alert("Numeric values are required when ordering from the menu");
+        if (isNaN(document.forms[0].menuItem1.value)){
+            locations += "| arroz con pollo ";
+        }
+        if (isNaN(document.forms[0].menuItem2.value)){
+            locations += "| ceviche ";
+        }
+        if (isNaN(document.forms[0].menuItem3.value)){
+            locations += "| chicha morada ";
+        }
+        if (isNaN(document.forms[0].menuItem4.value)){
+            locations += "| papa a la huancaina ";
+        }
+        if (isNaN(document.forms[0].menuItem5.value)){
+            locations += "| picarones ";
+        }
+        alert("Numeric values are required when ordering from the menu. \n" +
+            "Error has occurred at the following menu items: " + locations);
         error = true;
     } else {
             var menuItemOne = parseInt(document.forms[0].menuItem1.value);
