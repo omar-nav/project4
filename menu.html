@@ -26,24 +26,34 @@
             </ul>
         </div>
     </nav>
-    <fieldset id="billingAddress" class="text">
+    <fieldset id="menu" class="text">
         <legend>Menu</legend>
-        <label for="menuItem1">arroz con pollo $5</label>
-        <input id="menuItem1" name="menuItem1" type="number" required="required" />
-        <p></p>
-        <label for="menuItem2">ceviche $7</label>
-        <input id="menuItem2" name="menuItem2" type="number" required="required" />
-        <p></p>
-        <label for="menuItem3">chicha morada $1</label>
-        <input id="menuItem3" name="menuItem3" type="number" required="required" />
-        <p></p>
-        <label for="menuItem4">papa a la huancaina $4 </label>
-        <input id="menuItem4" name="menuItem4" type="number" required="required" />
-        <p></p>
-        <label for="menuItem5">picarones $2 </label>
-        <input id="menuItem5" name="menuItem5" type="number" required="required" />
+        <form>
+            <img src="images/arrozConPollo.jpg" alt="arroz con pollo" height="75" width="75">
+            <label for="menuItem1">arroz con pollo $5 </label>
+            <input id="menuItem1" name="menuItem1" type="text" />
+            <p></p>
+            <img src="images/ceviche.jpg" alt="ceviche" height="75" width="75">
+            <label for="menuItem2">ceviche $7 </label>
+            <input id="menuItem2" name="menuItem2" type="text" />
+            <p></p>
+            <img src="images/chichaMorada.jpg" alt="chicha morada" height="75" width="75">
+            <label for="menuItem3">chicha morada $1 </label>
+            <input id="menuItem3" name="menuItem3" type="text" />
+            <p></p>
+            <img src="images/papaAlaHuancaina.jpg" alt="papa a la huancaina" height="75" width="75">
+            <label for="menuItem4">papa a la huancaina $4 </label>
+            <input id="menuItem4" name="menuItem4" type="text" />
+            <p></p>
+            <img src="images/picarones.jpg" alt="picarones" height="75" width="75">
+            <label for="menuItem5">picarones $2 </label>
+            <input id="menuItem5" name="menuItem5" type="text" />
+            <div id="buttonContainer">
+                <input type="submit" value="Place Order" id="orderButton" onclick="calculate();"/>
+            </div>
+        </form>
     </fieldset>
 </header>
-<!--<script src="JSCode/menuItems.js"></script>-->
+<script src="JSCode/calculate.js"></script>
 </body>
 </html>

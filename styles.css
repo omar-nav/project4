@@ -3,6 +3,19 @@
     padding: 1rem;
 }
 
+#orderButton {
+    width: 20rem;
+    margin: 0 auto;
+    font-size: 24px;
+    top: 15px;
+    -webkit-appearance: none;
+    display: inline-block;
+}
+#buttonContainer {
+    width: 100%;
+    text-align: center;
+}
+
 fieldset.text label {
     position: relative;
     color: #5ac6a9;
@@ -20,6 +33,7 @@ fieldset.text input {
     width: 50px;
     height: 30px;
 }
+
 /*position: absolute;
 font-size: 2rem;
 text-shadow: 5px 5px 5px indianred;
