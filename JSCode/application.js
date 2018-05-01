@@ -4,6 +4,11 @@
  *    Filename: application.js
  *
  */
+// global variables
+var boxFail = false;
+var emailFail = false;
+var radioFail = false;
+
 function clearErrorMessages() {
     var errorDiv1 = document.getElementById("checkboxError");
     var errorDiv2 = document.getElementById("emailError");
@@ -24,6 +29,7 @@ function validateBoxes() {
     var errorDiv = document.getElementById("checkboxError");
     try {
         if (bartenderBox.checked === false && serverBox.checked === false && cookBox.checked === false && managerBox.checked === false) {
+            boxFail = true;
             throw "Please check at least one position for application";
         }
     }
@@ -38,6 +44,7 @@ function validateEmail() {
     var emailCheck = /^[_\w\-]+(\.[_\w\-]+)*@[\w\-]+(\.[\w\-]+)*(\.[\D]{2,6})$/;
     try {
         if (emailCheck.test(emailInput.value) === false) {
+            emailFail = true;
             throw "Please provide a valid email address";
         }
         // remove any email error styling and message
@@ -59,12 +66,18 @@ function validateRadio() {
     var errorDiv = document.getElementById("undocumentedError");
     try {
         if (citizenRadio.checked === false && visaRadio.checked === false && naRadio.checked === false) {
+            radioFail = true;
             throw "Please mark your current citizenship status";
         }
     }
     catch(msg) {
         errorDiv.innerHTML = msg;
         errorDiv.style.display = "block";
+    }
+}
+function showAlertBox() {
+    if (boxFail===true || emailFail === true || radioFail === true) {
+        alert("Fix errors specified in red text");
     }
 }
 
