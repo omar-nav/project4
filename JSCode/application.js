@@ -4,6 +4,18 @@
  *    Filename: application.js
  *
  */
+function clearErrorMessages() {
+    var errorDiv1 = document.getElementById("checkboxError");
+    var errorDiv2 = document.getElementById("emailError");
+    var errorDiv3 = document.getElementById("undocumentedError");
+    errorDiv1.innerHTML = "";
+    errorDiv1.style.display = "block";
+    errorDiv2.innerHTML = "";
+    errorDiv2.style.display = "block";
+    errorDiv3.innerHTML = "";
+    errorDiv3.style.display = "block";
+}
+
 function validateBoxes() {
     var allInputs = document.getElementsByTagName("input");
     var errorDiv = document.getElementById("checkboxError");
