@@ -77,7 +77,7 @@ function validateRadio() {
 }
 function showAlertBox() {
     if (boxFail===true || emailFail === true || radioFail === true) {
-        alert("Fix errors specified in red text");
+        alert("Fix errors specified in red text that appear \nafter clicking ok");
     }
 }
 
