@@ -31,7 +31,7 @@
         <h2>Apply Today!</h2>
         <!--<div id="errorText"></div>-->
         <!--<form action="results.htm" novalidate="novalidate">-->
-        <form>
+        <form onsubmit = "return !!(validateBoxes() & validateEmail() & validateRadio());">
             <fieldset id="positions" class="checks">
                 <legend>Check all positions you are applying for</legend>
                 <input id="bartender" name="bartender" type="checkbox" />
@@ -58,6 +58,7 @@
                     <label for="visa">work visa</label>
                     <input id="NA" name="statusType" type="radio" value="NA" />
                     <label for="NA">not available</label>
+                    <p id="undocumentedError" class="errorMsg"></p>
                 </div>
             </fieldset>
             <div id="buttonContainer">

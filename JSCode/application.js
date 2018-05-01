@@ -4,7 +4,21 @@
  *    Filename: application.js
  *
  */
-
+function validateBoxes() {
+    var allInputs = document.getElementsByTagName("input");
+    var errorDiv = document.getElementById("checkboxError");
+    try {
+        for (var i = 0, max = allInputs.length; i < max; i++) {
+            if (allInputs[i].type === 'checkbox')
+                allInputs[i].checked = false;
+        }
+        throw "Please check at least one position for application"
+    }
+    catch(msg) {
+        errorDiv.innerHTML = msg;
+        errorDiv.style.display = "block";
+    }
+}
 function validateEmail() {
     var emailInput = document.getElementById("emailbox");
     var errorDiv = document.getElementById("emailError");
@@ -22,6 +36,22 @@ function validateEmail() {
         errorDiv.innerHTML = msg;
         errorDiv.style.display = "block";
         emailInput.style.background = "rgb(255,233,233)";
+    }
+}
+
+function validateRadio() {
+    var allInputs = document.getElementsByTagName("input");
+    var errorDiv = document.getElementById("undocumentedError");
+    try {
+        for (var i = 0, max = allInputs.length; i < max; i++) {
+            if (allInputs[i].type === 'checkbox')
+                allInputs[i].checked = false;
+        }
+        throw "Please mark your current citizenship status"
+    }
+    catch(msg) {
+        errorDiv.innerHTML = msg;
+        errorDiv.style.display = "block";
     }
 }
 
