@@ -17,14 +17,15 @@ function clearErrorMessages() {
 }
 
 function validateBoxes() {
-    var allInputs = document.getElementsByTagName("input");
+    var bartenderBox = document.getElementById("bartender");
+    var serverBox = document.getElementById("server");
+    var cookBox = document.getElementById("cook");
+    var managerBox = document.getElementById("manager");
     var errorDiv = document.getElementById("checkboxError");
     try {
-        for (var i = 0, max = allInputs.length; i < max; i++) {
-            if (allInputs[i].type === 'checkbox')
-                allInputs[i].checked = false;
+        if (bartenderBox.checked === false && serverBox.checked === false && cookBox.checked === false && managerBox.checked === false) {
+            throw "Please check at least one position for application";
         }
-        throw "Please check at least one position for application"
     }
     catch(msg) {
         errorDiv.innerHTML = msg;
@@ -52,14 +53,14 @@ function validateEmail() {
 }
 
 function validateRadio() {
-    var allInputs = document.getElementsByTagName("input");
+    var citizenRadio = document.getElementById("citizen");
+    var visaRadio = document.getElementById("visa");
+    var naRadio = document.getElementById("NA");
     var errorDiv = document.getElementById("undocumentedError");
     try {
-        for (var i = 0, max = allInputs.length; i < max; i++) {
-            if (allInputs[i].type === 'checkbox')
-                allInputs[i].checked = false;
+        if (citizenRadio.checked === false && visaRadio.checked === false && naRadio.checked === false) {
+            throw "Please mark your current citizenship status";
         }
-        throw "Please mark your current citizenship status"
     }
     catch(msg) {
         errorDiv.innerHTML = msg;
