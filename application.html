@@ -48,7 +48,7 @@ Filename: application.html
                 <p id="emailError" class="errorMsg"></p>
             </fieldset>
             <fieldset id = "citizenship" class = "text">
-                <legend>citizenship status</legend>
+                <legend>immigration status</legend>
                 <div id="status" class="inline">
                     <input id="citizen" name="statusType" type="radio" value="citizen" />
                     <label for="citizen">U.S. citizen</label>
@@ -60,7 +60,7 @@ Filename: application.html
                 </div>
             </fieldset>
             <div id="buttonContainer">
-                <input type="submit" value="submit application" id="submitButton" />
+                <input type="submit" value="submit application" onclick="return clearErrorMessages();" id="submitButton" />
                 <input type="reset"  value="reset" onclick="return clearErrorMessages();" id="resetButton" />
             </div>
         </form>

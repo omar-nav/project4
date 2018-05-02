@@ -32,6 +32,9 @@ function validateBoxes() {
             boxFail = true;
             throw "Please check at least one position for application";
         }
+        boxFail = false;
+        errorDiv.innerHTML = "";
+        errorDiv.style.display = "none";
     }
     catch(msg) {
         errorDiv.innerHTML = msg;
@@ -48,6 +51,7 @@ function validateEmail() {
             throw "Please provide a valid email address";
         }
         // remove any email error styling and message
+        emailFail = false;
         emailInput.style.background = "";
         errorDiv.innerHTML = "";
         errorDiv.style.display = "none";
@@ -69,6 +73,9 @@ function validateRadio() {
             radioFail = true;
             throw "Please mark your current citizenship status";
         }
+        radioFail = false;
+        errorDiv.innerHTML = "";
+        errorDiv.style.display = "none";
     }
     catch(msg) {
         errorDiv.innerHTML = msg;
@@ -82,11 +89,32 @@ function showAlertBox() {
 }
 
 function createEventListeners() {
+    var bartenderBox = document.getElementById("bartender");
+    var serverBox = document.getElementById("server");
+    var cookBox = document.getElementById("cook");
+    var managerBox = document.getElementById("manager");
     var emailInput = document.getElementById("emailbox");
-    if (emailInput.addEventListener) {
+    var citizenRadio = document.getElementById("citizen");
+    var visaRadio = document.getElementById("visa");
+    var naRadio = document.getElementById("NA");
+    if (emailInput.addEventListener || bartenderBox.addEventListener || serverBox.addEventListener || cookBox.addEventListener || managerBox.addEventListener || emailInput.addEventListener || emailInput.addEventListener || emailInput.addEventListener || citizenRadio.addEventListener || visaRadio.addEventListener || naRadio.addEventListener ) {
+        bartenderBox.addEventListener("change", validateBoxes, false);
+        serverBox.addEventListener("change", validateBoxes, false);
+        cookBox.addEventListener("change", validateBoxes, false);
+        managerBox.addEventListener("change", validateBoxes, false);
         emailInput.addEventListener("change", validateEmail, false);
-    } else if (unInput.attachEvent) {
+        citizenRadio.addEventListener("change", validateRadio, false);
+        visaRadio.addEventListener("change", validateRadio, false);
+        naRadio.addEventListener("change", validateRadio, false);
+    } else {
+        bartenderBox.attachEvent("onchange", validateBoxes);
+        serverBox.attachEvent("onchange", validateBoxes);
+        cookBox.attachEvent("onchange", validateBoxes);
+        managerBox.attachEvent("onchange", validateBoxes);
         emailInput.attachEvent("onchange", validateEmail);
+        citizenRadio.attachEvent("onchange", validateRadio);
+        visaRadio.attachEvent("onchange", validateRadio);
+        naRadio.attachEvent("onchange", validateRadio);
     }
 }
 if (window.addEventListener) {
