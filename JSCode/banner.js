@@ -11,6 +11,6 @@ function showBanner() {
             banner=0;
         }
         document.changeBanner.src=myBanner[banner];
-        setTimeout("showBanner()",3000);
+        setTimeout("showBanner()",1700);
     }
 }
